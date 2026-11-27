@@ -8,11 +8,11 @@
     tools:context=".TriviaZone">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvTriviaZone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="178dp"
-        android:layout_marginTop="135dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="176dp"
         android:layout_marginBottom="577dp"
         android:text="Trivia Zone"
@@ -21,5 +21,76 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <TextView
+        android:id="@+id/tvQuestionNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="Question"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvQuestionText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTriviaZone"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvQuestionText"
+        android:layout_width="265dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="8dp"
+        android:text="Question text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/rgQuestionOptions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestionNum" />
+
+    <RadioGroup
+        android:id="@+id/rgQuestionOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestionText">
+
+        <RadioButton
+            android:id="@+id/rbOptionTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option two" />
+
+        <RadioButton
+            android:id="@+id/rbOptionOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option one" />
+
+        <RadioButton
+            android:id="@+id/rbOptionFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option four" />
+
+        <RadioButton
+            android:id="@+id/rbOptionThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Option three" />
+
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
