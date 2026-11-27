@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SubjectSelectionActivity"
-    android:background="@drawable/catergory_background">>
+    android:background="@drawable/game_background">
 
     <TextView
         android:id="@+id/categoryTitle"
