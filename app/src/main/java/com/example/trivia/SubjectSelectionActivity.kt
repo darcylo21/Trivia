@@ -32,7 +32,10 @@ class SubjectSelectionActivity : AppCompatActivity() {
             if (selectedId != -1) {
                 val optionSelected = when (selectedId) {
                     binding.rbMovies.id -> binding.rbMovies.text.toString()
-                    // ...or keep your findViewById version, it works fine
+                    binding.rbScience.id -> binding.rbScience.text.toString()
+                    binding.rbVideoGames.id -> binding.rbVideoGames.text.toString()
+
+
                     else -> ""
                 }
                 Log.d("NAV", "starting TriviaZone with $optionSelected")
