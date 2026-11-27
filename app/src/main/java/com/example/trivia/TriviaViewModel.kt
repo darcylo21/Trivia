@@ -78,7 +78,7 @@ class TriviaViewModel : ViewModel() {
     )
 
 
-    //Initialized all relevant variables such as score, questions, and the comepletness flag
+    //Initialized all relevant variables such as score, questions, and the completeness flag
     //Calls a function to populate the question data to the ui elements
     fun startQuiz(subject: String) {
         questions = triviaQuestions[subject] ?: emptyList()
