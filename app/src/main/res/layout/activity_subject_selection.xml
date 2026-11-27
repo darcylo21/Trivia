@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SubjectSelectionActivity">
+    tools:context=".SubjectSelectionActivity"
+    android:background="@drawable/catergory_background">>
 
     <TextView
         android:id="@+id/categoryTitle"
@@ -15,6 +16,7 @@
         android:layout_marginTop="92dp"
         android:layout_marginEnd="157dp"
         android:layout_marginBottom="620dp"
+        android:fontFamily="@font/pixelify_sans"
         android:text="Pick Category ?"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,11 +26,11 @@
 
     <LinearLayout
         android:id="@+id/subjectLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="249dp"
+        android:layout_height="134dp"
         android:layout_marginTop="110dp"
 
-        android:layout_marginBottom="328dp"
+        android:layout_marginBottom="320dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,34 +38,40 @@
         app:layout_constraintTop_toBottomOf="@+id/categoryTitle">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:fontFamily="@font/pixelify_sans"
             android:text="Subjects"
+            android:textAlignment="center"
             android:textSize="18sp" />
 
         <RadioGroup
             android:id="@+id/radioGroup"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RadioButton
                 android:id="@+id/rbScience"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:fontFamily="@font/pixelify_sans"
                 android:text="Science" />
 
             <RadioButton
                 android:id="@+id/rbMovies"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:fontFamily="@font/pixelify_sans"
                 android:text="Movies" />
 
             <RadioButton
                 android:id="@+id/rbVideoGames"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Video Games" />
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:fontFamily="@font/pixelify_sans"
+                android:text="Video Games"
+                android:textAlignment="viewStart" />
 
 
         </RadioGroup>
@@ -76,13 +84,15 @@
         android:layout_marginStart="160dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="161dp"
+        android:layout_marginBottom="68dp"
+        android:fontFamily="@font/pixelify_sans"
         android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subjectLayout"
-        app:layout_constraintVertical_bias="0.238" />
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
