@@ -9,17 +9,17 @@
     android:background="@drawable/game_background">
 
     <TextView
-        android:id="@+id/tvTriviaZone"
+        android:id="@+id/tvScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="176dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="176dp"
         android:layout_marginBottom="577dp"
-        android:text="Trivia Zone"
+        android:fontFamily="@font/pixelify_sans"
+        android:text="Score: 0"
         android:textAlignment="center"
         android:textSize="34sp"
-        android:fontFamily="@font/pixelify_sans"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tvQuestionText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTriviaZone"
+        app:layout_constraintTop_toBottomOf="@+id/tvScore"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView

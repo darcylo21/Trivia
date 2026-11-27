@@ -72,6 +72,7 @@ class TriviaZone : AppCompatActivity() {
             //Calls function from viewModel to get the score of the user after the game is over.
             viewModel.score.observe(this) { currentScore ->
                 Log.d("Trivia", "Score: $currentScore")
+                binding.tvScore.text = "Score: $currentScore"
             }
 
 
