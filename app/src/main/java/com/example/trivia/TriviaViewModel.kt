@@ -15,8 +15,11 @@ class TriviaViewModel : ViewModel() {
     val quizComplete = MutableLiveData<Boolean>()
     val score = MutableLiveData<Int>()
 
+    val correctNum = MutableLiveData<Int>()
+
     init {
         score.value = 0
+        correctNum.value = 0
         quizComplete.value = false
     }
 
@@ -84,6 +87,7 @@ class TriviaViewModel : ViewModel() {
         questions = triviaQuestions[subject] ?: emptyList()
         currentQuestionIndex = 0
         score.value = 0
+        correctNum.value = 0
         quizComplete.value = false
         showCurrentQuestion()
     }
@@ -107,7 +111,8 @@ class TriviaViewModel : ViewModel() {
         val question = currentQuestion.value ?: return
 
         if (answer == question.answer) {
-            score.value = (score.value ?: 0) + 1
+            score.value = (score.value ?: 0) + 10
+            correctNum.value = (correctNum.value?:0)+1
         }
 
         currentQuestionIndex++

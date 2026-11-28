@@ -1,5 +1,6 @@
 package com.example.trivia
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -75,7 +76,16 @@ class TriviaZone : AppCompatActivity() {
                 binding.tvScore.text = "Score: $currentScore"
             }
 
+        //Goes to Game over screen once the use completes the game. (Sends the score, number of correct answers, and total number of questions)
+        viewModel.quizComplete.observe(this) { isComplete ->
+            if (isComplete) {
+                val i = Intent(this, GameOverActivity::class.java)
+                i.putExtra("Score", viewModel.score.value ?: 0)
+                i.putExtra("Correct", viewModel.correctNum.value ?: 0)
+                i.putExtra("Total", 3)
+                startActivity(i)
+            }
 
-
+        }
     }
 }
